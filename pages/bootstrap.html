@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=he, initial-scale=1.0">
+    <title>BOOTSTRAP</title>
+    <!-- fivicon -->
+    <link rel="shortcut icon" href="./img/logo-bird.png" type="image/x-icon">
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/29c3be7601.js" crossorigin="anonymous"></script>
+    <!-- LINK DE BOOTSTRAP DE CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+
+    <!-- css -->
+    <link rel="stylesheet" href="css/style-bootstrap.css">
+</head>
+
+<body>
+    <header class="mb-5">
+        <nav class="navbar navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand text-center" href="#">Menu offcanvas centrado</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end text-bg-dark bg-purple" tabindex="-1" id="offcanvasDarkNavbar"
+                    aria-labelledby="offcanvasDarkNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                            aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#">BOOTSTRAP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="./abrecuentos.html">ABRECUENTOS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">PSEUDOCLASES</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                    <div>
+                        <p class="bs-pLetraChica w-75 mx-auto py-3">a este menu se le borro el formulario y el
+                            desplegable, se agrego un nav-item al body</p>
+                        <p class="bs-pLetraChica w-75 mx-auto">se cambio color de fondo en el desplegable agregando
+                            clase bg-purple tuve que usar !important</p>
+                        <p class="bs-pLetraChica w-75 mx-auto py-2">los parrafos tienen 75% ancho</p>
+                        <p class="bs-pLetraChica w-75 mx-auto">se ajusta con codigo propio la letra chica</p>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <h1 class="text-center h1Bootstrap">BOOTSTRAP 5.3.3</h1>
+        <section class="d-flex justify-content-evenly columnaFlexible">
+            <div>
+                <h3>Carousel con Grid system</h3>
+                <p>Estructura con clases container -->row-->col</p>
+            </div>
+
+
+            <div>
+                <h3>Breakpoint</h3>
+                <ul class="mx-5 p-3 border border-secondary border-5 breakpoints">
+                    <li>lg -- min 992 -- desde 992px</li>
+                    <li>md -- min 768 -- desde 768px</li>
+                    <li>sm -- min 576 -- desde 576px</li>
+                </ul>
+            </div>
+        </section>
+        <section class="section1 container my-5">
+          <div class="row m-5">
+            <h2 class=" text-center col-12 ">Carousel con texto </h2>
+            <h2 class=" text-center col-12 fs-5 fw-lighter lh-lg">Carousel con texto <br> Ocupa el 100% en mobile, 50% dispositivos medios, texto 30% y carousel 50% en dispositivos grandes </h2>
+          </div>
+            <div class="row justify-content-center align-items-center">
+                <p class="col-sm-12 col-md-6 col-lg-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Maiores, fugiat praesentium provident quam ab
+                    assumenda.</p>
+                <!-- carousel -->
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="../img/monsturo-coloes_small.webp" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/monstruo-colores_small(2).avif" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/monstruo-colores_small(3).avif" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/monsturo-coloes_small(4).webp" class="d-block w-100" alt="...">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+                            data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+                            data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- fin carousel -->
+            </div>
+        </section>
+
+        <section class="section2 container my-5">
+            <div class="row border border-info">
+                <h2 class="col text-center">titulo secundario</h2>
+            </div>
+            <div class="row border border-primary">
+                <p class="col-sm-12 col-md-6 col-lg-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                    Quibusdam, aliquid. Commodi facere debitis
+                    ipsam officiis odit, tenetur inventore totam enim?</p>
+                <p class="col-sm-12 col-md-6 col-lg-4">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Possimus, deleniti dicta ipsum sapiente vitae
+                    temporibus.</p>
+                <div class="col-sm-12 col-md-12 col-lg-5">
+                    <h2 class="text-center">otro titulo</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi facilis placeat eum in pariatur
+                        fuga.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row border border-success columnaFlexible">
+                <h3 class="col col-sm-12">titulo ultimo bloque</h3>
+                <p class="col col-sm-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae sed, eaque hic quia libero
+                    ex officiis
+                    reiciendis dignissimos distinctio, accusantium culpa quaerat maxime sint doloribus error laudantium
+                    eum
+                    nobis in.</p>
+            </div>
+        </section>
+        <section class="cartas">
+            <h2 class="text-center">Cards con igual altura independientemente del contenido</h2>
+            <h2 class=" text-center col-12 fs-5 fw-lighter lh-lg">Agrega gap y se trabaja row-cols desde el padre en lugar de col con breakpoint en cada hijo</h2>
+            <div>
+                <div class="row row-cols-1 row-cols-md-5 g-4 cartaIndividual">
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="../img/cuentos-erizo-abrecuentos.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="../img/juana-y-sus-emociones.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a short card.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="../img/la-alegria-de-nina.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="card h-100">
+                        <img src="../img/la-calma-del-leon-abrecuentos.webp" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title">Card title</h5>
+                          <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+        </section>
+
+        <section class="accordeon">
+            <h2 class="text-center">Accordion</h2>
+            <h2 class=" text-center col-12 fs-5 fw-lighter lh-lg">se agrega contenido con grid system</h2>
+
+            <div class="acordeonInterior">
+                <div class="accordion" id="accordionExample">
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          NINA
+                        </button>
+                      </h2>
+                      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div class="accordion-body container">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img class="w-100" src="../img/la-alegria-de-nina.webp" alt="">
+                                </div>
+                                <div class="col-8 flexCentrado">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque.</p>
+                                </div>
+                            </div>                        
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          MONSTRUOS
+                        </button>
+                      </h2>
+                      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body container">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img class="w-100"  src="../img/monstruo-colores-ppal-abrecuentos.webp" alt="">
+                                </div>
+                                <div class="col-8 flexCentrado">
+                                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque.</p>
+                                </div>
+                            </div>                        
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accordion-item">
+                      <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          LEON
+                        </button>
+                      </h2>
+                      <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body container">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img class="w-100" src="../img/la-calma-del-leon-abrecuentos.webp" alt="">
+                                </div>
+                                <div class="col-8 flexCentrado">
+                                    <p >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Itaque.</p>
+                                </div>
+                            </div>                        
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+
+        </section>
+
+
+        <section class="border border-2 border-warning container my-5"> 
+            <div class="row">
+            <h2 class="text-center">Modal</h2>
+            <h2 class=" text-center col-12 fs-5 fw-lighter lh-lg">Al hacer click en el boton de + muestra mas info</h2>
+        </div>
+            <div class="modalInterno flexCentrado">
+                <img class="modalTeQuiero"  src="../img/te_quiero_siempre-abrecuentos.webp" alt="">
+                
+           
+
+
+<!-- Button que abre modal -->
+<button type="button"  data-bs-toggle="modal" data-bs-target="#exampleModal">
+    <i class="fa-solid fa-plus"></i>
+  </button>
+  
+  <!-- Modal contenido -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title fs-5" id="exampleModalLabel">TITULO DE MODAL<br> (ojo por default aparece como h1</h3>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio vitae iure porro sequi voluptatem vero.</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">CIERRE</button>
+          <button type="button" class="btn btn-primary">SIN FUNCION</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+
+        </section>
+
+    </main>
+    <footer >
+      
+
+        <div>
+            <h6>&#169;Copyright 2024 | Todos los derechos reservados</h6>
+        </div>
+
+        <!-- semana 3 -->
+        <div class="whatsapp">
+            <a href="https://api.whatsapp.com/send?phone=1144556677888&text=Hola%20quisiera%20saber%20" target="_blank">
+                <img src="../img/whastaspp.svg" alt="whatsapp">
+            </a>
+        </div>
+    </footer>
+    <!-- LINK DE SCRIPT DE BOOTSTRAP -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

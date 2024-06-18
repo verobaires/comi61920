@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PSEUDOELEMENTO Y PSEUDOCLASE</title>
+    <link rel="stylesheet" href="./css/style-pseudoclase.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="menu">
+                <li><a href="./pages/abrecuentos.html">ABRECUENTOS</a></li>
+                <li><a href="./pages/bootstrap.html">BOOTSTRAP</a></li>
+            </ul>
+
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div>
+                <h2>PSEUDOCLASE</h2>
+                <p class="explicacion">ESPECIFICA CAMBIO DE ESTADO DEL ELEMENTO</p>
+            </div>
+
+            <ul class="menu pseudoclase">
+                <li><a href="#hover">:hover</a></li>
+                <li><a href="#active">:active</a></li>
+                <li><a href="#focus">:focus</a></li>
+                <li><a href="#visited">:visited</a></li>
+                <li><a href="#firstChild">:first-child</a></li>
+                <li><a href="#firstType">:first-of-type</a></li>
+                <li><a href="#link">:link</a></li>
+                <li><a href="#nth">:nth-child()</a></li>
+                <li><a href="#checked">:checked</a></li>
+                <li><a href="#not">:not(selector)</a></li>
+            </ul>
+            <div class="ejemplos">
+                <div id="hover">
+                    <h2>Hover</h2>
+                    <p class="miHover">se activa el fondo cuando paso el mouse</p>
+                </div>
+                <div id="active">
+                    <h2>Active</h2>
+                    <p> Cuando el usuario presiona el botón (es decir, está en estado :active), el estilo del botón
+                        cambia
+                    </p>
+                    <button>PUSH HERE</button>
+                </div>
+
+                <div id="focus">
+                    <h2>Focus</h2>
+                    <p>Cuando el usuario hace clic o enfoca el campo (por ejemplo, usando el tabulador del teclado), se
+                        aplica el estilo definido por la pseudoclase :focus.</p>
+
+                    <form action="">
+                        <input type="text" name="" id="">
+                        <input type="submit" value="Enviar">
+                    </form>
+                </div>
+
+                <div id="visited">
+                    <a href="./pages/paginaEjemplo1.html">Verde si visitado</a>
+                    <a href="./pages/paginaEjemplo2.html">Verde si visitado</a>
+                </div>
+
+                <div id="firstChild">
+                    <h2>First child</h2>
+                    <h3 class="subtitulo">Utiliza la pseudoclase :first-child para aplicar estilos específicos al primer
+                        parrafo, como un fondo más oscuro y texto en negrita.</h3>
+                    <div class="cajaFC">
+                        <p>Lorem, ipsum.</p>
+                        <p>Lorem, ipsum.</p>
+                        <p>Lorem, ipsum.</p>
+                        <p>Lorem, ipsum.</p>
+                        <p>Lorem, ipsum.</p>
+                    </div>
+                </div>
+                <div id="firstType">
+                    <h2>First of Type</h2>
+                    <h3 class="subtitulo">Aplica al primer párrafo de cada sección. Que sera en negrita y con font size
+                        más grande.</h3>
+
+                    <div>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+
+                    <div>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+
+                    <div>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div id="link">
+                    <h2>Link</h2>
+                    <h3>:link aplica estilos especificos a los enlaces que no han sido visitados.</h3>
+                    <div class="boxLink">
+                        <a href="./pages/paginaEjemplo1.html">LINK AZUL (no visitado)</a>
+                        <a href="./pages/bootstrap.html">AMARILLENTO VISITADO</a>
+                    </div>
+                </div>
+
+                <div id="nth">
+                    <h2>NTH-CHILD( )</h2>
+                    <h3>Permite indicar un hijo especifico o una posicion </h3>
+                    <ul class="nth-1">
+                        <li>HIJO1</li>
+                        <li>HIJO2</li>
+                        <li>HIJO3</li>
+                        <li>HIJO4</li>
+                    </ul>
+
+                    <ul class="nth-2">
+                        <li>HIJO1 letra azul</li>
+                        <li>HIJO2 letra purpura</li>
+                        <li>HIJO3 letra verde</li>
+                        <li>HIJO4 letra violeta</li>
+                        <li>HIJO5 letra naranja</li>
+                    </ul>
+                </div>
+
+                <div id="checked">
+                    <h2>Checked</h2>
+                    <h3>cuando el checkbox se selecciona aparece una sombra rosa</h3>
+                    <form action="">
+                        <label>
+                            <input type="checkbox"> Opción 1
+                        </label>
+                        <label>
+                            <input type="checkbox"> Opción 2
+                        </label>
+                        <label>
+                            <input type="checkbox"> Opción 3
+                        </label>
+                    </form>
+                </div>
+
+                <div id="not">
+                    <div class="not-1">
+                        <h2>Not Ejemplo 1(elemento 1) </h2>
+                        <h3>(elemento 2) aplico :not para aplicar cambiar el color de la tipografia a ROSA a los
+                            elementos menos el
+                            tercero</h3>
+                        <p>(elemento 3) Lorem ipsum dolor sit.</p>
+                        <p>Dicta modi enim cupiditate.</p>
+                        <p>Officiis tempore ducimus eveniet?</p>
+                        <p>Lorem ipsum dolor sit.</p>
+                        <p>Dicta modi enim cupiditate.</p>
+                        <p>Officiis tempore ducimus eveniet?</p>
+                    </div>
+
+                    <div class="not-2">
+                        <h2>Not Ejemplo 2  </h2>
+                        <h3>para que deje sin tachar solo al tercer parrafo debo colocar todos los parrafos dentro de un
+                            div</h3>
+                        <div class="not-2Parrafo">
+                            <p>Lorem ipsum dolor sit.</p>
+                            <p>Dicta modi enim cupiditate.</p>
+                            <p>Officiis tempore ducimus eveniet?</p>
+                            <p>Lorem ipsum dolor sit.</p>
+                            <p>Dicta modi enim cupiditate.</p>
+                            <p>Officiis tempore ducimus eveniet?</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+        <section>
+            <div>
+                <h2>PSEUDOELEMENTO</h2>
+                <p class="explicacion">PERMITEN AÑADIR ESTILOS A UNA PARTE CONCRETA DEL DOCUMENTO</p>
+            </div>
+
+            <ul class="menu pseudoclase">
+                <li><a href="#before-after">::after y ::before</a></li>
+                <li><a href="#placeholder">::placeholder</a></li>
+                <li><a href="#first-letter">::first-letter</a></li>
+                <li><a href="#selection">::selection</a></li>
+
+            </ul>
+
+            <div class="ejemplo">
+                <div id="before-after">
+                    <h2>Lineas con hover para ::before y ::after</h2>
+                    <ul>
+                        <li>Uno</li>
+                        <li>Dos</li>
+                        <li>Tres</li>
+                        <li>Cuatro</li>
+                    </ul>
+                </div>
+
+                <div id="placeholder">
+                    <h2>::placeholder para cambiar estilos</h2>
+                    <form action="">
+                        <input type="text" name="" id="" placeholder="Complete su nombre">
+                        <input type="submit" value="ENVIAR">
+                    </form>
+                </div>
+
+                <div id="first-letter">
+                    <h2>con ::first-letter cambio estilo de la primera letra del parrafo</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam, velit.</p>
+                </div>
+
+                <div id="selection">
+                    <h2>::selection indica estilos cuando seleccionamos un contenido</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro voluptates ab maiores eligendi
+                        explicabo labore?</p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+
+</body>
+
+</html>

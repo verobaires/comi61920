@@ -1,0 +1,273 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
+
+nav {
+    padding: 25px
+}
+
+nav ul li {
+    border: 1px solid red;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+ a {
+    text-decoration: none;
+    color: black
+}
+
+h2,
+.explicacion {
+    text-align: center;
+    margin: 15px;
+
+}
+
+.pseudoclase {
+    padding: 30px;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.pseudoclase li:nth-child(odd) {
+    background-color: rgb(176, 172, 252);
+
+}
+
+.pseudoclase li:nth-child(even) {
+    background-color: rgb(125, 123, 179);
+
+}
+
+.pseudoclase li {
+    padding: 5px;
+    margin: 5px;
+    box-shadow: 2px 2px 0px 0px #093c5e, 4px 4px 0px 0px #5FB8FF, 7px 7px 0px 0px #E1EEFF, 5px 5px 15px 5px rgba(0, 0, 0, 0);
+}
+
+.ejemplos div {
+    padding: 30px;
+    text-align: center;
+}
+
+#hover p.miHover:hover {
+    background-color: #093c5e;
+    color: white;
+}
+
+
+button {
+    margin-top: 20px;
+    padding: 4px;
+}
+
+button:active {
+    background-color: yellow;
+}
+
+input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #4CAF50;
+    /* Verde */
+    box-shadow: 12px 12px 5px rgba(175, 76, 158, 0.5);
+}
+
+#visited a {
+    color: rgb(128, 0, 90);
+}
+
+#visited a:visited {
+    color: green
+}
+
+#firstChild {
+    width: 50%;
+    margin: 0 auto;
+    background-color: darkgray;
+}
+
+.subtitulo {
+    font-size: 16px;
+    font-weight: 300;
+    margin-bottom: 25px;
+}
+
+#firstChild .cajaFC p:first-child {
+    background-color: rgb(40, 38, 38);
+    font-weight: 900;
+}
+
+#firstType {
+    width: 50%;
+    margin: 0 auto;
+    background-color: rgb(201, 50, 155);
+}
+
+#firstType div p:first-of-type{
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+#link .boxLink {
+    display: flex;
+    justify-content: space-around;
+    gap: 25px;
+}
+
+#link h3{
+    font-size: 1.25rem;
+    font-weight: lighter;
+}
+
+#link a:link{
+    color: rgb(46, 21, 167);
+}
+
+#link a:visited{
+    color: rgb(221, 115, 28);
+}
+
+.nth-1, .nth-2{
+    width: 65%;
+    margin: 15px auto;
+    padding: 20px;
+    border: 5px solid black;
+
+}
+
+#nth ul li{
+    list-style: none;
+    line-height: 1.5;
+}
+
+.nth-1 li:nth-child(odd){
+    background-color: aquamarine;
+}
+.nth-1 li:nth-child(even){
+    background-color: rgb(15, 104, 104);
+}
+
+.nth-2 li:nth-child(1){
+    color: blue;
+}
+.nth-2 li:nth-child(3){
+    color: purple;
+}
+.nth-2 li:nth-child(4){
+    color: green;
+}
+.nth-2 li:nth-child(2){
+    color: blueviolet;
+}
+.nth-2 li:nth-child(5){
+    color: orangered;
+}
+
+  /* Elemento Checkbox, cuando está marcado */
+  input[type="checkbox"]:checked {
+    box-shadow: 0 0 0 3px hotpink;}
+
+   /* not */
+   #not{
+    width: 60%;
+    background-color: darkolivegreen;
+    margin: 15px auto;
+   }
+   /* Estilos para los elementos que no son el tercero */
+   #not .not-1 :not(:nth-child(3)) {
+    color:rgb(128, 0, 90)
+  }
+  /* Estilos para parrafos excepto el tercero */
+  #not .not-2Parrafo :not(:nth-child(3)) {
+    font-weight: 900;
+    text-decoration: line-through;
+  }
+
+  /* FIN PSEUDOCLASES */
+
+  #before-after ul{
+    display: flex;
+    width: 70%;
+    margin: 15px auto;
+    background-color: coral;
+    justify-content: space-around;
+    padding: 25px;
+    list-style: none;
+  }
+
+  #before-after li{
+    position: relative;
+  }
+
+  #before-after li::before{
+    content: '';
+    display: block;
+    width: 100%;
+    position: absolute;   
+    background: red;
+    height: 3px;    
+  }
+
+  #before-after li:hover::after{
+    content: '';
+    display: block;
+    width: 100%;
+    position: absolute;   
+    background: rgb(89, 0, 255);
+    height: 3px;
+  }
+
+  #before-after li:hover::before{    
+        content: '';
+        display: none;   
+  }
+  #placeholder, #first-letter,#selection{
+    width: 65%;
+    margin: 30px auto;
+    padding: 15px;
+  }
+
+#placeholder form{
+    display: flex;
+    justify-content: center;
+}
+
+  #placeholder ::placeholder{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:purple;
+  }
+
+  #first-letter p::first-letter{
+    color: purple;
+    font-size: 2rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: 1.25px;
+  }
+  
+
+  #selection p::selection{
+    background-color: aqua;
+    color: rgb(246, 11, 11);   
+    
+  }

@@ -1,0 +1,140 @@
+📝REM: Unidad de media que tiene en cuenta el tamaño de la tipografia definida en el root, si no se especifica nada se toma como 16px, se puede hacer el reseteo de sobre la etiqueta html de font-size: 62.5%, para que 1 rem sea igual a 10px lo que facilita el calculo
+📝EM: Tiene en cuenta la raiz pero tambien su padre, es decir que si un elemento tiene a su padre directo con un tamaño de tipografia ese valor para el hijo sera igual a 1 em. Si no se especifica 1em sera equivalente a 16px
+🔡CUANDO USAR REM O EM: https://abalozz.es/sobre-como-usar-px-em-rem-y-percent-en-responsive-design/ 
+ https://lupitacode.medium.com/em-vs-rem-cu%C3%A1l-deber%C3%ADa-usar-938376e92da0
+✍️USO DE 62.5%: https://platzi.com/discusiones/2008-html-css/111887-al-hacer-el-truco-de-emfont-size-625em-625-16px-10px-si-la-etiqueta-html-tendra-ese-valor-10px-de-font-size-entonces/
+
+
+✔️Sistema de grillas
+➡️declarar display: grid al contenedor padre
+➡️grid-template-column: 10px 50px 100px-->define cuantas columnas tendra la grilla, definiendo cada columna por su tamaño 
+	(en el ejemplo tendra 3 columnas la primera tendra un ancho de 10px, la segunda de 50px y la tercera de 100px)
+➡️grid-template-row: 500px 300px auto---> define cuantas columnas tendra la grilla, definiendo cada columna por su tamaño 
+	(en el ejemplo la grilla tendra 3 filas la primera de 500px, la segunda de 300px y la ultima se adecuara al espacio disponible)
+➡️grid-column: 1/3 -->indicamos en que columna empieza y que numero de columna termina
+   grid-colum: span 2 -->indicamos que ese elemento ocupara (se expandira) en dos columnas
+➡️grid-row: 1/4 -->indicamos en que fila empieza y que numero de fila termina
+   grid-row: span 2 ---->indicamos que ese elemento se expandira por dos filas
+
+
+👀Dentro de las media queries solo deben colocar lo que cambia según el tamaño no repitan todo el codigo
+➡️Display: none ----> pueden usarlo con media querie para ocultar elementos segun el tamaño de dispositivo
+
+
+➡️➡️PSEUDOCLASES Y PSEUDOELEMENTOS
+https://www.w3schools.com/css/css_pseudo_classes.asp
+https://lenguajecss.com/css/selectores/pseudoelementos/
+https://lenguajecss.com/css/selectores/pseudoclases/
+https://www.mclibre.org/consultar/htmlcss/css/css-pseudoclases.html
+https://developer.mozilla.org/es/docs/Web/CSS/Pseudo-elements
+QUE RAYOS SON LOS PSEUDOELEMENTOS: https://www.youtube.com/watch?v=wHY02FpNYnU
+PSEUDOELEMENTO ::PLACEHOLDER: https://www.w3schools.com/cssref/sel_placeholder.asp
+
+HOVER
+Hover con imagenes: https://codepen.io/kw7oe/pen/mPeepv
+Usar hover correctamente (Dorian Designs): https://www.youtube.com/watch?v=T6tQbmQ0Rws
+Hover sobre lineas: https://www.oloblogger.com/2017/01/efectos-hover-lineas-animadas-enlaces.html
+https://www.w3schools.com/CSSref/sel_hover.php
+Alternativa a hover en pantallas chicas:https://felixicaza.com/blog/efecto-hover-aprende-a-usarlo-correctamente-en-tus-estilos-css#alternativa-al-efecto-hover-en-pantallas-t%C3%A1ctiles
+
+✨📝PSEUDOCLASE
+Palabras claves para cambiar estado de elemento
+
+Elemento:Pseudoclase {nuevas propiedades}
+
+:HOVER{ }: Cuando paso con el mouse
+:FOCUS{ }: Cuando ingreso a un input
+:NTH-CHILD( ){  } : Entre parentesis puedo decir que numero de hijo quiero elegir, o si son pares (even) o impares (odd)
+
+Otros
+:ACTIVE{} : Cuando clickeo el elemento
+:VISITED{} : el estado del link cambia de color cuando ya hayas usado ese link
+
+h1:hover{color: blue}
+form input:focus{width: 200px;}
+
+➡️PSEUDOELEMENTO
+Para seleccionar elemento sin colocar una clase 
+::PLACEHOLDER{ }
+::FIRST-LETTER { }
+::FIRST-CHILD{} : Para elegir el primer hijo
+::LAST-CHILD{} : Para elegir el ultimo hijo
+
+
+LINK BOOSTRAP
+https://bootstrap-cheatsheet.themeselection.com/?ref=hackernoon.com
+¿Cómo centrar un menu Bootstrap o posicionarlo en left o right? sin escribir nuevo código CSS?: https://www.youtube.com/watch?v=IA2L8q2fj_Y
+https://cheatsheets.shecodes.io/bootstrap
+
+
+LIBRERIA (Permite tener piezas preestablecidas) VS FRAMEWORK (estructura completa con herramientas y reglas)
+
+➡️BOOTSTRAP  - https://getbootstrap.com/
+Funciona a traves de clases, cada clase tiene una propiedad y valor preestablecida
+
+✨Documentacion: https://getbootstrap.com/docs/5.3/getting-started/introduction/
+
+❓Como integrar
+CON CDN
+👀Link CSS en head (ubicarlo arriba de tu css) 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+👀Link SCRIPT justo antes del cierre de body 
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+✨UTILITIES -->SIZING: WIDHT - HEIGHT
+✨UTILITIES -->SPACING : MARGIN - PADDING - GAP 
+
+✨COMPONENTES
+Tomamos toda una estructura que ya es responsive
+-Cards
+-Navbar
+-Carousel
+-Accordion
+-Modal
+-etc
+
+⚠️Podemos modificar todos los componentes es importante inspeccionar para ver que propiedades se aplican a cada elemento y luego con mis clases hacer los cambios para personalizar
+ 
+✨GRID SYSTEM de Bootstrap 
+✍️https://getbootstrap.com/docs/5.3/layout/grid/
+- Se basa en 12 columnas como maximo
+-Me permite trabajar el responsive
+-Tiene 3 clases importantes
+	container --> row -->col
+-Se basa en los breakpoints de boostrap   
+✍️https://getbootstrap.com/docs/5.3/layout/breakpoints/
+SM : mayor o igual a 576px
+MD : mayor o igual a 768px
+LG : mayor o igual a 992px
+XL : mayor o igual a 1200px
+XXL : mayor o igual a 1400px
+Defino en una linea cuantas columnas de cada fila ocupara el elemento segun el tamaño de dispositivo
+
+👉Ejemplo
+
+<div class="container  ">
+  <div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      Hijo 1
+    </div>
+    <div class=" col-sm-12 col-md-3 col-lg-4">
+      Hijo 2
+    </div>
+    <div class=""col-sm-12 col-md-3 col-lg-5">
+      Hijo 3
+    </div>
+  </div>
+</div>
+
+Aca decimos que :
+-👀Dentro de 1 fila tenemos 3 hijos
+
+-👀El hijo 1 en medidas de mas de 576px ocupara el total de la pantalla, en medidas de mas de 768px ocupara la mitad de la pantalla (6 columnas de 12 disponibles), en medidas de mas de 992px ocupara 3 de las 12 columnas disponibles
+
+-👀El hijo 2 en medidas de mas de 576px ocupara el total de la pantalla, en medidas de mas de 768px ocupara  3 columnas de 12 disponibles , en medidas de mas de 992px ocupara 4 de las 12 columnas disponibles
+
+-👀El hijo 3 en medidas de mas de 576px ocupara el total de la pantalla, en medidas de mas de 768px ocupara  3 columnas de 12 disponibles , en medidas de mas de 992px ocupara 5 de las 12 columnas disponibles
+
+⚠️A tener en cuenta: siempre la suma de las columnas entre elementos de la misma fila deben sumar 12, si se pasa se ira el contenido abajo
+

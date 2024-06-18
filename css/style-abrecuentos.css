@@ -1,0 +1,582 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-size: 14px;
+}
+
+.fa-solid,
+.fa-regular,
+.barra {
+    color: rgb(249, 203, 5)
+}
+
+header h4 {
+    font-weight: 100;
+    display: inline;
+}
+
+header .header-superior {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    border-bottom: 1px solid lightgrey;
+    padding-bottom: 5px;
+}
+
+header .header-izq {
+    display: flex;   
+    justify-content: space-around;
+    width: 25%;
+}
+
+header .header-der {
+    display: flex;
+}
+
+header .header-der .bandera {
+    clip-path: circle(39% at 50% 50%);
+    width: 30px;
+}
+
+header .header-medio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 25px;
+}
+
+header .header-medio img {
+    width: 85%;
+}
+
+header .header-medio form {
+    width: 50%;
+    position: relative;
+
+}
+
+header .header-medio form input[type=search] {
+    border: none;
+    outline: 2px solid #f9cb3a;
+    border-radius: 15px;
+    line-height: 2.65;
+    width: 100%;
+}
+
+header .header-medio form button[type=submit] {    
+    border-radius: 0px 25px 25px 0px;
+    line-height: 2.65;
+    text-align: center;
+    padding: 20px 20px 8px;
+    position: absolute;
+    top: 0;
+    right: -1px;
+    width: 60px;
+    min-width: 60px;
+    border: none;
+    background-color: #f9cb3a;
+    height: 100%;
+
+
+}
+
+header .header-medio form button[type=submit] .fa-magnifying-glass {
+    color: #e07438;
+    line-height: 42px;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+}
+
+header .header-medio .iconos-compras {
+    width: 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 20px;
+}
+
+nav.nav-mobile {
+    display: none;   
+}
+
+nav.nav-desktop {
+    background-color: rgb(249, 203, 5);
+ position: sticky;
+    top: 5px;
+}
+
+nav.nav-desktop .tablet-and-up {
+    list-style: none;
+    display: flex;   
+    padding: 20px 15px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+nav.nav-desktop .tablet-and-up li a:hover   {
+    background-color: #e07438;      
+        padding: 6px;
+        border-radius: 15px 0 15px 0;      
+}
+
+nav ul a {
+    text-decoration: none;
+    color: black;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* footer */
+footer .novedades {
+    background-color: #f9cb3a;
+    border: 1px solid lightcoral;    
+     border-radius: 5px;
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;    
+    margin: 0 auto;
+    grid-column: 1/6; 
+    grid-row: 1/2;
+}
+
+footer .novedades p:first-child {
+    font-size: 20px;
+}
+
+footer .novedades .novedadesResaltado {
+    font-weight: 600;
+}
+
+footer .footerForm {
+    width: 45%;
+}
+
+footer input {
+    border: none;
+    padding: 2%;
+}
+
+footer .novedades .footerForm input[type=submit] {
+    background-color: #333e48;
+    border-radius: 0 15px 15px 0;
+    color: white;
+    width: 25%;
+    position: relative;
+    right: 4px;
+}
+
+footer .novedades .footerForm input[type=email] {
+    border-radius: 15px 0 0 15px;
+    width: 60%;
+}
+
+footer .novedades .footerForm input[type=email]::placeholder {
+    padding-left: 5px;
+    color: red;
+}
+
+footer ul {
+    list-style: none;
+}
+
+
+
+/* footer grid lines */
+.grillaLines {
+    display: grid;
+    width: 80vw;
+   grid-template-columns: 1.5fr repeat(3, 1fr);
+    grid-template-rows: 1fr 0.75fr 1fr 1fr 0.5fr;   
+    justify-items: center;
+    align-items: center;
+    margin: 50px auto 2px; 
+}
+
+.grillaLines div:nth-child(2) {
+    display: flex;
+    grid-column: 1/2;
+    grid-row: 2/3;
+    height: 100%;
+    align-items: center;
+}
+
+.grillaLines div:nth-child(2) .fa-headphones {
+    font-size: 29px;
+}
+
+.grillaLines div:nth-child(2) div.footerRecomendaciones {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 10px;
+}
+
+.footerRecomendaciones h5:first-child {
+    font-weight: lighter;
+}
+
+.grillaLines div:nth-child(3) {
+    grid-column: 1/2;
+    grid-row: 3/4;
+}
+
+.grillaLines div:nth-child(4) {
+    grid-column: 1/2;
+    grid-row: 4/5;
+}
+
+.grillaLines div:nth-child(5) {
+    grid-column: 2/3;
+    grid-row: 2/6;
+}
+
+.grillaLines div:nth-child(6) {
+    grid-column: 3/4;
+    grid-row: 2/6;
+}
+
+.grillaLines div:nth-child(7) {
+    grid-column: 4/5;
+    grid-row: 2/6;
+}
+
+.grillaLines div:nth-child(8) {
+    grid-column: 1/6;
+    grid-row: 5/6;
+} 
+
+
+
+/* fin footer */
+
+/* whatsapp */
+.whatsapp {
+    position: fixed;
+    bottom: 15px;
+    right: 5px;
+}
+
+.whatsapp img {
+    width: 80%;
+}
+
+/* fin whatsapp */
+
+
+/* main */
+h1 {
+    padding: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #e07438;
+    font-size: 2.15rem;
+    letter-spacing: 7px;
+}
+
+.carousel img {
+    width: 100%;
+}
+
+.itemGaleria {
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    height: 400px;
+}
+
+.itemGaleria h2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 10px;
+    height: 10%;
+}
+
+.cuentosErizo h2,
+.juanaEmociones h2 {
+    height: 12%;
+}
+
+.itemGaleria img {
+    width: 100%;
+    object-fit: cover;
+    height: 80%;
+    padding: 0 5px;
+}
+
+.itemGaleria.monstruoSmall img {
+    height: auto;
+    padding: 0;
+}
+
+.itemGaleria .itemGaleria-compra {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;    
+    height: 10%;
+    margin: 0 15px;
+}
+
+.cuentosErizo .itemGaleria-compra,
+.juanaEmociones .itemGaleria-compra {
+    padding-bottom: 15px;
+}
+
+.itemGaleria .itemGaleria-compra p {
+    font-size: 1rem;
+}
+
+.itemGaleria .itemGaleria-compra .fa-cart-shopping {
+    color: grey;
+}
+
+
+.galeria {
+    display: grid;
+   grid-template-columns: 1fr 1fr repeat(4, 0.5fr) 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "teQuiero leon monstruo monstruo monstruo monstruo mientras mientras"
+        "nina nina small1   small2   small3   small4   erizo    juana   ";
+
+    margin: 10px 15px;
+    gap: 15px; 
+}
+
+.teQuiero {
+    grid-area: teQuiero;
+}
+
+.calmaLeon {
+    grid-area: leon;
+}
+
+.monstruoColores {
+    grid-area: monstruo;
+}
+
+.monstruoSmall {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.monstruoColores--small1 {
+    grid-area: small1;
+
+}
+
+.monstruoColores--small2 {
+    grid-area: small2;
+    justify-content: center;
+    padding-bottom: 50%;
+}
+
+.monstruoColores--small3 {
+    grid-area: small3;
+    justify-content: center;
+    padding-top: 110%;
+}
+
+.monstruoColores--small4 {
+    grid-area: small4;
+    justify-content: end;
+}
+
+.mientrasTanto {
+    grid-area: mientras;
+}
+
+.alegriaNina {
+    grid-area: nina;
+}
+
+.cuentosErizo {
+    grid-area: erizo;
+}
+
+.juanaEmociones {
+    grid-area: juana;
+}
+
+
+/* media queries */
+
+/* MOBILE (320px a 768px  */
+@media screen and (max-width:768px) {
+    header h4 {
+        font-size: 0.55rem;
+    }
+
+    header .header-izq {
+        width: auto;
+    }
+
+  
+
+    header .header-medio {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin: 0 25px;
+        margin-bottom: 20px;
+    }
+
+
+
+    header .header-medio .logo {
+        order: 1;
+    }
+
+    header .header-medio form {
+        width: 93%;
+        order: 3;
+        margin: 0 auto;
+    }
+
+    header .header-medio .iconos-compras {
+        width: 10%;
+        /* order: 2; */
+    }
+
+    nav ul a {
+        font-size: 0.75rem;
+    }
+
+    nav.nav-desktop {
+        display: none
+    }
+
+    nav.nav-mobile {
+        display: block;
+    }
+
+    nav.nav-mobile ul {
+        list-style: none;
+        display: flex;
+    }
+
+    nav.nav-mobile ul li {
+        text-align: center;
+    }
+
+    nav.nav-mobile ul a {
+        font-size: 0.6rem;
+    }
+
+    nav.nav-mobile img {
+        width: 30%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .galeria {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+        grid-template-areas:
+        "monstruo monstruo"
+        "teQuiero leon    "
+        "mientras mientras"
+        "erizo    juana    "
+        "nina     nina    ";
+    }
+
+    footer .novedades {
+        width: 100%;
+        grid-column: 1/6;
+        grid-row: 1/2;
+        flex-direction: column;
+    }
+
+    footer .novedades p:first-child {
+        font-size: 12px;
+    }
+
+    footer .novedades .footerForm {
+        width: 100%;
+    }
+
+    footer .novedades .footerForm input[type="email"],
+    footer .novedades .footerForm input[type="submit"] {
+        width: auto;
+    }
+    .itemGaleria.monstruoSmall,
+    .novedades p:nth-child(2) {
+        display: none;
+    }
+
+    .grillaLines {
+          grid-template-columns: 2fr 2fr 1fr 1fr 2fr;
+          grid-template-rows: repeat(2, 1fr) 0.25fr 1.5fr 1fr 20px;
+       
+      }
+
+
+    .grillaLines div:nth-child(2) {
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+
+    .grillaLines div:nth-child(2) .fa-headphones {
+        font-size: 20px;
+    }
+
+    .grillaLines div:nth-child(3) {
+        grid-column: 3/6;
+        grid-row: 2/3;
+    }
+
+    .grillaLines div:nth-child(4) {
+        grid-column: 2/5;
+        grid-row: 3/4;
+        font-size: 1.25rem;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        color: #d05b5b;
+    
+    }
+
+    .grillaLines div:nth-child(5) {
+        grid-column: 1/3;
+        grid-row: 4/5;
+    }
+
+    .grillaLines div:nth-child(6) {
+        grid-column: 3/6;
+        grid-row: 4/5;
+        width: auto;
+    }
+
+    .grillaLines div:nth-child(7) {
+        grid-column: 2/5;
+        grid-row: 5/6;
+    }
+
+    .grillaLines div:nth-child(8) {
+        grid-column: 1/6;
+        grid-row: 6/7;
+    }
+
+    .grillaLines div:nth-child(8) h6 {
+        padding-top: 45px;
+        padding-bottom: 45px;
+    }
+
+}

@@ -1,0 +1,84 @@
+.navbar .bg-purple {
+    background-color: purple !important;
+}
+
+.navbar .offcanvas .bs-pletraChica {
+    font-size: 10px;
+    font-weight: 900;
+}
+
+.navbar .navbar-brand {
+    width: 90%;
+}
+
+ul li {
+    list-style: none;
+}
+
+.breakpoints {
+    width: fit-content;
+}
+
+
+.carousel-control-next:focus,
+.carousel-control-next:hover,
+.carousel-control-prev:focus,
+.carousel-control-prev:hover {
+    opacity: .7;
+    background-color: rgb(188, 211, 73);
+}
+
+.cartaIndividual {
+    justify-content: space-evenly;
+}
+
+.acordeonInterior {
+    width: 70%;
+    margin: 30px auto;
+}
+
+.flexCentrado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modalInterno {
+    position: relative;
+}
+
+.modalInterno .fa-plus {
+    position: absolute;
+    bottom: 67px;
+    right: 30%;
+    font-size: 2.5rem;
+    color: red;
+    background: darkblue;
+    padding: 0.5%;
+    border-radius: 50%;
+}
+
+.modalTeQuiero {
+    width: 500px;
+    min-width: 200px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 576px){
+    .navbar .navbar-brand{
+        width: 50%;
+    }
+    .h1Bootstrap{
+        padding-top:15px ;
+    }
+    .modalInterno .fa-plus {
+        bottom: 15px;
+        right: 10%;
+    }
+    .columnaFlexible{
+        flex-direction: column;
+    }
+    .acordeonInterior {
+        width: 90%;
+    }
+}
