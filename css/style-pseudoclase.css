@@ -271,3 +271,9 @@ input[type="text"]:focus {
     color: rgb(246, 11, 11);   
     
   }
+
+
+  .tituloEjemplo{
+    background: black;
+    color: white;
+  }
